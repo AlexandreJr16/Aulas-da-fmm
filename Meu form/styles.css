@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+}
+#plan-1,
+#plan-2 {
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  background-color: #aba10e;
+  box-shadow: 1px 2px 16px #aba10e;
+  border-radius: 50%;
+
+  position: absolute;
+
+  animation: orbita 20s infinite none;
+  transform: rotate(100deg);
+  transition: 1s;
+}
+
+#plan-1 {
+  right: -100px;
+  bottom: -100px;
+}
+#plan-2 {
+  left: -100px;
+  top: -100px;
+}
+.orb {
+  background-color: rgba(255, 255, 255, 0.616);
+  width: 100px;
+  height: 100px;
+  transform: translate(150px, -150px);
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.616);
+}
+@keyframes orbita {
+  0% {
+    transform: rotate(100);
+  }
+
+  100% {
+    transform: rotate(460deg);
+  }
+}
+
+#formul {
+  border-radius: 16px;
+  background: linear-gradient(145deg, #212121, #1c1c1c);
+  box-shadow: 23px 23px 33px #171717, -23px -23px 33px #272727;
+  width: 80%;
+  max-width: 600px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+form {
+  gap: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.campo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.campo input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  background: transparent;
+  border: solid white 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+#btn input {
+  margin: 0.5em 1em;
+  padding: 0.5em 1em;
+  font-size: 16pt;
+  border: solid white 2px;
+  color: white;
+  font-weight: 900;
+  background: transparent;
+  transition: 0.6s;
+}
+#btn input:hover {
+  background-color: white;
+  color: #1f1f1f;
+}
